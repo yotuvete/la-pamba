@@ -37,10 +37,9 @@
     }],
     "servesCuisine": "Mexican",
     "priceRange": "$$",
-    "telephone": "+52-XXXXXXXXXX",
     "sameAs": [
       "https://www.instagram.com/lapamba.mx",
-      "https://www.facebook.com/LaPambaMx"
+      "https://www.facebook.com/p/La-Pamba-Mx-61553806222858/"
     ]
   }
   </script>
@@ -48,32 +47,34 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
     /* =====================================================
        VARIABLES & RESET
     ===================================================== */
     :root {
-      --yellow:      #F4B942;
-      --yellow-dark: #D4951A;
-      --black:       #1A1A1A;
+      --yellow:      #E5B332;
+      --yellow-light:#F5D27A;
+      --yellow-dark: #C49818;
+      --black:       #1A1208;
       --white:       #FFFFFF;
-      --red:         #C44D34;
-      --red-dark:    #A33D27;
-      --gray-dark:   #2A2A2A;
-      --gray-mid:    #555555;
-      --gray-light:  #F7F6F2;
+      --red:         #C94420;
+      --red-dark:    #A8380E;
+      --cream:       #FBF5E8;
+      --gray-dark:   #2A1F10;
+      --gray-mid:    #6B5C44;
+      --gray-light:  #F7F2E8;
       --whatsapp:    #25D366;
       --wapp-dark:   #1DA851;
       --rappi:       #FF5E3A;
       --didi:        #FF6B00;
-      --font-h:      'Fredoka One', cursive;
-      --font-b:      'Nunito', sans-serif;
+      --font-h:      'Playfair Display', Georgia, serif;
+      --font-b:      'Montserrat', sans-serif;
       --nav-h:       70px;
       --radius:      18px;
-      --shadow:      0 6px 28px rgba(0,0,0,0.10);
-      --shadow-lg:   0 16px 52px rgba(0,0,0,0.20);
+      --shadow:      0 6px 28px rgba(26,18,8,0.10);
+      --shadow-lg:   0 16px 52px rgba(26,18,8,0.22);
       --ease:        all 0.32s cubic-bezier(0.4,0,0.2,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -92,27 +93,33 @@
       display: inline-block;
       background: var(--yellow);
       color: var(--black);
-      font-family: var(--font-h);
-      font-size: 0.8rem;
+      font-family: var(--font-b);
+      font-size: 0.72rem;
+      font-weight: 700;
       padding: 5px 16px;
       border-radius: 100px;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 14px;
     }
-    .tag-dark { background: rgba(244,185,66,0.15); color: var(--yellow); }
+    .tag-dark { background: rgba(229,179,50,0.18); color: var(--yellow); }
 
     .sec-title {
       font-family: var(--font-h);
       font-size: clamp(2rem, 5vw, 3.4rem);
       line-height: 1.05;
       margin-bottom: 14px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
     }
     .sec-sub {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--gray-mid);
       max-width: 580px;
       margin-bottom: 48px;
+      font-family: var(--font-b);
+      font-style: italic;
+      letter-spacing: 0.3px;
     }
     .sec-sub-light { color: rgba(255,255,255,0.6); }
 
@@ -134,6 +141,8 @@
     .btn-yellow:hover { background: var(--yellow-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,185,66,0.45); }
     .btn-outline-white { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
     .btn-outline-white:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+    .btn-outline-dark { background: transparent; color: var(--black); border: 2px solid rgba(26,18,8,0.35); }
+    .btn-outline-dark:hover { background: rgba(26,18,8,0.08); transform: translateY(-2px); }
     .btn-dark { background: var(--black); color: var(--white); }
     .btn-dark:hover { background: var(--gray-dark); transform: translateY(-2px); }
     .btn-wapp { background: var(--whatsapp); color: var(--white); }
@@ -176,18 +185,18 @@
       transition: var(--ease);
     }
     #nav.scrolled {
-      background: rgba(26,26,26,0.93);
+      background: rgba(26,18,8,0.95);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border-bottom-color: rgba(244,185,66,0.18);
+      border-bottom-color: rgba(229,179,50,0.25);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 
     .logo { display: flex; align-items: center; gap: 10px; }
     .logo-svg { width: 42px; height: 42px; flex-shrink: 0; }
     .logo-text { display: flex; flex-direction: column; }
-    .logo-name { font-family: var(--font-h); font-size: 1.35rem; color: var(--yellow); line-height: 1; }
-    .logo-sub  { font-size: 0.6rem; color: rgba(255,255,255,0.5); letter-spacing: 0.6px; text-transform: uppercase; }
+    .logo-name { font-family: var(--font-h); font-size: 1.35rem; color: var(--yellow); line-height: 1; font-weight: 900; letter-spacing: -0.5px; }
+    .logo-sub  { font-size: 0.55rem; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; font-family: var(--font-b); font-style: italic; font-weight: 500; }
 
     .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
     .nav-links a {
@@ -227,28 +236,40 @@
       display: flex; align-items: center;
       background: var(--black); overflow: hidden;
     }
-    /* PRODUCTION: replace the gradient below with:
-       background-image: url('images/hero-pambazos.webp');
-       background-size: cover; background-position: center;
-       Or use a <video> tag for autoplay loop. */
     .hero-bg {
       position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 65% 45%, rgba(196,77,52,0.25) 0%, transparent 55%),
-        radial-gradient(ellipse at 20% 80%, rgba(244,185,66,0.12) 0%, transparent 50%),
-        linear-gradient(160deg, #1a1a1a 0%, #2d1408 60%, #1a1a1a 100%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    /* Decorative dots pattern */
+    .hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      /* Viñeta perimetral: oscurece los 4 bordes, deja el centro de la foto visible */
+      background: radial-gradient(ellipse at 62% 52%, transparent 28%, rgba(0,0,0,0.72) 100%);
+    }
     .hero-bg::after {
       content: '';
       position: absolute; inset: 0;
-      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
+      /* Gradiente izquierda→derecha: izquierda casi negra para el texto, derecha más abierta */
+      background: linear-gradient(
+        to right,
+        rgba(10,5,2,0.96) 0%,
+        rgba(10,5,2,0.85) 38%,
+        rgba(10,5,2,0.42) 65%,
+        rgba(10,5,2,0.18) 100%
+      );
     }
-    /* Image placeholder label */
+    /* Fondo de puntos dorados — textura sutil sobre el overlay */
+    #hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background-image: radial-gradient(circle, rgba(229,179,50,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
     .hero-img-note {
       position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%);
-      background: rgba(244,185,66,0.18); color: var(--yellow);
+      background: rgba(229,179,50,0.18); color: var(--yellow);
       font-family: monospace; font-size: 0.7rem; padding: 6px 14px;
       border-radius: 8px; white-space: nowrap; z-index: 5;
       pointer-events: none;
@@ -263,11 +284,13 @@
 
     .hero-badge {
       display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(244,185,66,0.12);
-      border: 1px solid rgba(244,185,66,0.28);
+      background: rgba(229,179,50,0.12);
+      border: 1px solid rgba(229,179,50,0.30);
       color: var(--yellow); padding: 8px 18px;
       border-radius: 100px; font-size: 0.82rem; font-weight: 700;
       margin-bottom: 22px; backdrop-filter: blur(8px);
+      font-family: var(--font-b);
+      letter-spacing: 0.5px;
     }
     .pulse {
       width: 8px; height: 8px; background: #22c55e;
@@ -284,14 +307,20 @@
       font-size: clamp(3rem, 8vw, 6.5rem);
       color: var(--white); line-height: 1.0;
       margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
-    .hero-title em { color: var(--yellow); font-style: normal; }
+    .hero-title em { color: var(--yellow); font-style: italic; }
 
     .hero-subtitle {
-      font-family: var(--font-h);
-      font-size: clamp(1rem, 2.2vw, 1.45rem);
-      color: rgba(255,255,255,0.65);
+      font-family: var(--font-b);
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+      color: rgba(255,255,255,0.60);
       margin-bottom: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
     }
     .hero-copy {
       font-size: 1rem; color: rgba(255,255,255,0.55);
@@ -312,6 +341,7 @@
       z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 6px;
       color: rgba(255,255,255,0.35); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
       animation: bob 2.4s ease-in-out infinite;
+      font-family: var(--font-b); font-weight: 600;
     }
     @keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
     .hero-scroll svg { width: 18px; height: 18px; }
@@ -320,11 +350,11 @@
        ANATOMY SECTION
     ===================================================== */
     #anatomia {
-      background: var(--black); padding: 96px 0; position: relative; overflow: hidden;
+      background: var(--gray-dark); padding: 96px 0; position: relative; overflow: hidden;
     }
     #anatomia::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--yellow), var(--red), var(--yellow), transparent);
     }
     .anat-header { text-align: center; margin-bottom: 60px; }
     .anat-header .sec-title { color: var(--white); }
@@ -346,10 +376,11 @@
     }
     .anat-item:hover { border-color: rgba(244,185,66,0.3); background: rgba(244,185,66,0.05); }
     .anat-icon {
-      width: 52px; height: 52px; background: var(--yellow);
+      width: 56px; height: 56px; background: var(--yellow);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; flex-shrink: 0;
+      flex-shrink: 0;
     }
+    .anat-icon svg { width: 30px; height: 30px; }
     .anat-text h3 { font-family: var(--font-h); font-size: 1.15rem; color: var(--white); margin-bottom: 3px; }
     .anat-text p  { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
 
@@ -359,7 +390,7 @@
     /* =====================================================
        MENU
     ===================================================== */
-    #menu { padding: 96px 0; background: var(--gray-light); }
+    #menu { padding: 96px 0; background: var(--cream); }
     .menu-header { text-align: center; margin-bottom: 52px; }
 
     .cat-title {
@@ -421,7 +452,7 @@
       text-align: center; transition: var(--ease);
     }
     .box-card:hover { border-color: var(--yellow); background: rgba(244,185,66,0.07); transform: translateY(-4px); }
-    .box-emoji { font-size: 2.8rem; margin-bottom: 10px; display: block; }
+    .box-emoji { display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 10px; min-height: 52px; }
     .box-name { font-family: var(--font-h); font-size: 1.2rem; color: var(--white); margin-bottom: 8px; }
     .box-inc  { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 18px; }
     .box-price { font-family: var(--font-h); font-size: 2rem; color: var(--yellow); }
@@ -433,7 +464,7 @@
       background: var(--white); border-radius: var(--radius);
       padding: 32px 36px; box-shadow: var(--shadow); text-align: center;
     }
-    .drinks-emoji { font-size: 3.2rem; margin-bottom: 10px; }
+    .drinks-emoji { display: flex; justify-content: center; align-items: center; margin-bottom: 10px; min-height: 76px; }
     .drinks-name { font-family: var(--font-h); font-size: 1.4rem; margin-bottom: 6px; }
     .drinks-sub { font-size: 0.85rem; color: var(--gray-mid); margin-bottom: 16px; }
     .chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
@@ -447,6 +478,7 @@
        HISTORY / NOSOTROS
     ===================================================== */
     #nosotros { padding: 96px 0; background: var(--white); }
+    #nosotros .nos-quote { font-family: var(--font-h); font-size: 1.05rem; color: var(--red); border-left: 4px solid var(--yellow); padding-left: 18px; margin-top: 28px; line-height: 1.55; font-style: italic; }
     .nos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
     .nos-content .sec-sub { margin-bottom: 36px; }
     .nos-quote {
@@ -531,7 +563,7 @@
     /* =====================================================
        UBICACION
     ===================================================== */
-    #ubicacion { padding: 96px 0; background: var(--gray-light); }
+    #ubicacion { padding: 96px 0; background: var(--cream); }
     .ubic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
 
     .map-wrap {
@@ -567,9 +599,10 @@
 
     .badge-stat {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(196,77,52,0.1); border: 1px solid rgba(196,77,52,0.2);
+      background: rgba(201,68,32,0.1); border: 1px solid rgba(201,68,32,0.25);
       color: var(--red); padding: 8px 16px; border-radius: 100px;
       font-size: 0.8rem; font-weight: 700; margin-top: 4px;
+      font-family: var(--font-b);
     }
 
     /* =====================================================
@@ -597,11 +630,14 @@
     .ped-icon { font-size: 3rem; margin-bottom: 14px; display: block; }
     .ped-name { font-family: var(--font-h); font-size: 1.15rem; color: var(--white); margin-bottom: 6px; }
     .ped-desc { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .ped-qr { margin-top: 16px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(37,211,102,0.3); }
+    .ped-qr img { width: 100%; height: 155px; object-fit: cover; object-position: center 42%; display: block; }
+    .ped-qr-label { font-size: 0.7rem; color: rgba(255,255,255,0.38); padding: 7px 0 0; letter-spacing: 0.5px; }
 
     /* =====================================================
        GALERÍA
     ===================================================== */
-    #galeria { padding: 80px 0; background: var(--gray-light); }
+    #galeria { padding: 80px 0; background: var(--cream); }
     .gal-header { text-align: center; margin-bottom: 44px; }
     .masonry {
       columns: 3; column-gap: 14px;
@@ -618,8 +654,8 @@
        FOOTER
     ===================================================== */
     #footer {
-      background: #0f0f0f; padding: 60px 0 28px;
-      border-top: 1px solid rgba(244,185,66,0.12);
+      background: #120D04; padding: 60px 0 28px;
+      border-top: 3px solid var(--yellow);
     }
     .footer-top {
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -684,7 +720,8 @@
       .nav-links, .nav-ctas { display: none; }
       .hbg { display: flex; }
 
-      .hero-inner   { grid-template-columns: 1fr; }
+      #hero { align-items: flex-start; min-height: auto; }
+      .hero-inner   { grid-template-columns: 1fr; padding-top: calc(var(--nav-h) + 28px); padding-bottom: 56px; }
       .hero-mascot-wrap { display: none; }
 
       .anat-grid    { grid-template-columns: 1fr; }
@@ -724,33 +761,7 @@
   <div class="container nav-inner">
 
     <a href="#hero" class="logo">
-      <!-- MASCOT SVG: round white character, big eyes, yellow sombrero, red scarf -->
-      <svg class="logo-svg" viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg">
-        <!-- Sombrero brim -->
-        <ellipse cx="50" cy="26" rx="40" ry="7" fill="#F4B942"/>
-        <!-- Sombrero crown -->
-        <rect x="30" y="4" width="40" height="23" rx="7" fill="#F4B942"/>
-        <!-- Sombrero band -->
-        <rect x="30" y="19" width="40" height="7" fill="#C44D34"/>
-        <!-- Sombrero pompom -->
-        <circle cx="50" cy="4" r="4.5" fill="#C44D34"/>
-        <!-- Body -->
-        <circle cx="50" cy="72" r="38" fill="#FAFAFA"/>
-        <!-- Left eye -->
-        <circle cx="36" cy="62" r="10" fill="#1A1A1A"/>
-        <circle cx="33" cy="58" r="3" fill="white"/>
-        <!-- Right eye -->
-        <circle cx="64" cy="62" r="10" fill="#1A1A1A"/>
-        <circle cx="61" cy="58" r="3" fill="white"/>
-        <!-- Cheeks -->
-        <circle cx="23" cy="74" r="7" fill="#FFBBAA" opacity="0.45"/>
-        <circle cx="77" cy="74" r="7" fill="#FFBBAA" opacity="0.45"/>
-        <!-- Smile -->
-        <path d="M 37 82 Q 50 96 63 82" stroke="#1A1A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <!-- Scarf -->
-        <path d="M 18 100 Q 50 110 82 100 Q 82 93 50 91 Q 18 93 18 100Z" fill="#C44D34"/>
-        <path d="M 56 95 L 52 115" stroke="#C44D34" stroke-width="7" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img src="images/logo-mascota.png" class="logo-svg" alt="La Pamba mascota">
       <div class="logo-text">
         <span class="logo-name">La Pamba</span>
         <span class="logo-sub">Pambacería Estilo Orizaba</span>
@@ -762,19 +773,19 @@
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#eventos">Eventos</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#pedidos">Pedir</a></li>
     </ul>
 
     <div class="nav-ctas">
-      <!-- REEMPLAZA el número 521XXXXXXXXXX con el número real de WhatsApp -->
-      <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
-         class="btn btn-wapp" target="_blank" rel="noopener">
+      <a href="#" data-msg="Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
+         class="btn btn-wapp wa-link" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Pide por WhatsApp
       </a>
       <!-- REEMPLAZA con el link real de tu restaurante en Rappi -->
-      <a href="https://www.rappi.com.mx" class="btn btn-rappi btn-sm" target="_blank" rel="noopener">
-        🛵 Rappi
+      <a href="https://www.rappi.com.mx/restaurantes/1930327867-la-pamba" class="btn btn-rappi btn-sm" target="_blank" rel="noopener">
+        <img src="https://about.rappi.com/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75" alt="Rappi" style="height:16px;width:auto;filter:brightness(0) invert(1);vertical-align:middle;">
       </a>
     </div>
 
@@ -790,11 +801,14 @@
   <a href="#nosotros">📖 Nuestra historia</a>
   <a href="#eventos">🎉 Eventos y catering</a>
   <a href="#ubicacion">📍 Ubicación y horario</a>
+  <a href="#faq">❓ Preguntas frecuentes</a>
   <a href="#pedidos">🛵 Hacer un pedido</a>
   <div class="mob-ctas">
-    <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
-       class="btn btn-wapp" target="_blank" rel="noopener">💬 WhatsApp</a>
-    <a href="https://www.rappi.com.mx" class="btn btn-rappi" target="_blank" rel="noopener">🛵 Rappi</a>
+    <a href="#" data-msg="Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
+       class="btn btn-wapp wa-link" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="https://www.rappi.com.mx/restaurantes/1930327867-la-pamba" class="btn btn-rappi" target="_blank" rel="noopener">
+        <img src="https://about.rappi.com/_next/image?url=%2Fimages%2Flogo.png&w=64&q=75" alt="Rappi" style="height:16px;width:auto;filter:brightness(0) invert(1);vertical-align:middle;">
+      </a>
   </div>
 </div>
 
@@ -803,13 +817,7 @@
      HERO
 ========================================================= -->
 <section id="hero">
-  <div class="hero-bg"></div>
-  <!-- PRODUCTION: reemplaza .hero-bg con:
-       <video autoplay muted loop playsinline class="hero-video">
-         <source src="videos/pambazos-sizzle.mp4" type="video/mp4">
-       </video>
-       O añade background-image a .hero-bg con la foto hero de pambazos. -->
-  <span class="hero-img-note">AQUÍ VA: video o foto de pambazos siendo preparados (1920×1080)</span>
+  <div class="hero-bg" style="background-image:url('images/corte-transversal.jpeg');background-size:cover;background-position:center 55%;"></div>
 
   <div class="container hero-inner">
     <div class="hero-left">
@@ -829,61 +837,42 @@
       </p>
       <div class="hero-ctas">
         <a href="#menu" class="btn btn-yellow">Ver Menú</a>
-        <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
-           class="btn btn-outline-white" target="_blank" rel="noopener">
+        <a href="#" data-msg="Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
+           class="btn btn-outline-white wa-link" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Pedir Ahora
         </a>
       </div>
+
+      <!-- Trust Badges -->
+      <div style="display: flex; gap: 24px; margin-top: 32px; flex-wrap: wrap; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 24px;">⚾</span>
+          <div style="font-size: 13px;">
+            <strong style="color: var(--white);">7 años</strong><br>
+            <span style="color: rgba(255,255,255,0.7); font-size: 11px;">vendiendo pambazos</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 24px;">⭐</span>
+          <div style="font-size: 13px;">
+            <strong style="color: var(--white);">4.8/5</strong><br>
+            <span style="color: rgba(255,255,255,0.7); font-size: 11px;">en apps de delivery</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 24px;">👥</span>
+          <div style="font-size: 13px;">
+            <strong style="color: var(--white);">3k+</strong><br>
+            <span style="color: rgba(255,255,255,0.7); font-size: 11px;">clientes mensuales</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Hero Mascot – full version with chef apron -->
+    <!-- Hero Mascot -->
     <div class="hero-mascot-wrap">
-      <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Sombrero brim -->
-        <ellipse cx="80" cy="36" rx="62" ry="10" fill="#F4B942"/>
-        <!-- Sombrero crown -->
-        <rect x="46" y="6" width="68" height="32" rx="11" fill="#F4B942"/>
-        <!-- Sombrero decoration -->
-        <rect x="46" y="28" width="68" height="10" fill="#C44D34"/>
-        <!-- Sombrero pom -->
-        <circle cx="80" cy="6" r="7" fill="#C44D34"/>
-
-        <!-- Body -->
-        <circle cx="80" cy="118" r="60" fill="#FAFAFA"/>
-        <circle cx="80" cy="118" r="60" fill="none" stroke="#F0F0F0" stroke-width="1.5"/>
-
-        <!-- Apron -->
-        <path d="M 50 135 Q 80 125 110 135 L 108 175 Q 80 185 52 175 Z" fill="white"/>
-        <path d="M 50 135 Q 80 125 110 135 L 112 142 Q 80 132 48 142 Z" fill="#F4B942"/>
-
-        <!-- Left eye -->
-        <circle cx="58" cy="104" r="16" fill="#1A1A1A"/>
-        <circle cx="53" cy="97" r="5" fill="white"/>
-        <circle cx="51" cy="96" r="2" fill="white" opacity="0.7"/>
-        <!-- Right eye -->
-        <circle cx="102" cy="104" r="16" fill="#1A1A1A"/>
-        <circle cx="97" cy="97" r="5" fill="white"/>
-        <circle cx="95" cy="96" r="2" fill="white" opacity="0.7"/>
-
-        <!-- Cheeks -->
-        <circle cx="38" cy="118" r="11" fill="#FFBBAA" opacity="0.45"/>
-        <circle cx="122" cy="118" r="11" fill="#FFBBAA" opacity="0.45"/>
-
-        <!-- Smile -->
-        <path d="M 60 132 Q 80 150 100 132" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-
-        <!-- Scarf/collar -->
-        <path d="M 28 158 Q 80 172 132 158 Q 132 148 80 145 Q 28 148 28 158Z" fill="#C44D34"/>
-        <!-- Scarf tail -->
-        <path d="M 90 151 L 85 195 L 95 188 L 91 200" stroke="#C44D34" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-        <!-- Small pambazo held by mascot -->
-        <ellipse cx="125" cy="138" rx="18" ry="9" fill="#D4951A"/>
-        <ellipse cx="125" cy="134" rx="16" ry="7" fill="#F4B942"/>
-        <rect x="109" y="131" width="32" height="10" rx="2" fill="#8B4513"/>
-        <ellipse cx="125" cy="131" rx="16" ry="4" fill="#D4951A"/>
-      </svg>
+      <img src="images/logo-mascota.png" alt="La Pamba mascota" style="width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.35));">
     </div>
   </div>
 
@@ -909,14 +898,26 @@
       <!-- Left ingredients -->
       <div class="anat-side anat-left">
         <div class="anat-item reveal d1">
-          <div class="anat-icon">🥖</div>
+          <div class="anat-icon">
+            <!-- Pan / Pambazo -->
+            <svg viewBox="0 0 44 36" fill="none" stroke="#1A1208" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 18 C4 10 10 5 22 5 C34 5 40 10 40 18 C40 26 34 31 22 31 C10 31 4 26 4 18Z"/>
+              <path d="M7 17 C7 12 13 9 22 9 C31 9 37 12 37 17"/>
+              <line x1="9" y1="20" x2="35" y2="20"/>
+            </svg>
+          </div>
           <div class="anat-text">
             <h3>El Pan</h3>
             <p>Pambazo tostado en plancha, crocante por fuera, suave por dentro.</p>
           </div>
         </div>
         <div class="anat-item reveal d2">
-          <div class="anat-icon">🧀</div>
+          <div class="anat-icon">
+            <!-- Queso de Oaxaca – espiral de hebra -->
+            <svg viewBox="0 0 40 40" fill="none" stroke="#1A1208" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 7 C28 7 34 12 34 19 C34 26 28 32 20 32 C14 32 9 28 9 23 C9 18 14 15 19 15 C23 15 26 18 26 21 C26 24 23 26 20 26 C18 26 17 25 17 23"/>
+            </svg>
+          </div>
           <div class="anat-text">
             <h3>Queso de Oaxaca</h3>
             <p>Queso de hebra derretido al momento. Sin atajos, sin excusas.</p>
@@ -926,46 +927,37 @@
 
       <!-- Center mascot -->
       <div class="anat-mascot reveal d3">
-        <!-- Chef mascot -->
-        <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-          <!-- Chef hat -->
-          <ellipse cx="80" cy="28" rx="36" ry="8" fill="white"/>
-          <rect x="52" y="8" width="56" height="22" rx="4" fill="white"/>
-          <ellipse cx="80" cy="8" rx="28" ry="8" fill="white"/>
-          <!-- Hat band -->
-          <rect x="52" y="22" width="56" height="6" fill="#F4B942"/>
-          <!-- Body -->
-          <circle cx="80" cy="118" r="60" fill="#FAFAFA"/>
-          <!-- Left eye -->
-          <circle cx="58" cy="104" r="16" fill="#1A1A1A"/>
-          <circle cx="53" cy="97" r="5" fill="white"/>
-          <!-- Right eye -->
-          <circle cx="102" cy="104" r="16" fill="#1A1A1A"/>
-          <circle cx="97" cy="97" r="5" fill="white"/>
-          <!-- Cheeks -->
-          <circle cx="38" cy="118" r="11" fill="#FFBBAA" opacity="0.4"/>
-          <circle cx="122" cy="118" r="11" fill="#FFBBAA" opacity="0.4"/>
-          <!-- Smile -->
-          <path d="M 60 132 Q 80 150 100 132" stroke="#1A1A1A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Scarf -->
-          <path d="M 28 158 Q 80 172 132 158 Q 132 148 80 145 Q 28 148 28 158Z" fill="#C44D34"/>
-          <!-- Chef spatula -->
-          <rect x="118" y="90" width="6" height="50" rx="3" fill="#888" transform="rotate(-20,121,115)"/>
-          <rect x="114" y="80" width="14" height="18" rx="3" fill="#666" transform="rotate(-20,121,89)"/>
-        </svg>
+        <img src="images/logo-mascota.png" alt="La Pamba mascota" style="width:100%;height:auto;">
       </div>
 
       <!-- Right ingredients -->
       <div class="anat-side anat-right">
         <div class="anat-item reveal d2">
-          <div class="anat-icon">🫘</div>
+          <div class="anat-icon">
+            <!-- Frijol / kidney bean -->
+            <svg viewBox="0 0 40 40" fill="none" stroke="#1A1208" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 22 C9 13 15 7 23 9 C29 11 33 17 30 24 C27 31 19 35 13 32 C10 30 9 26 9 22Z"/>
+              <path d="M14 21 C17 15 24 15 27 20"/>
+            </svg>
+          </div>
           <div class="anat-text">
             <h3>Frijoles con Chorizo</h3>
             <p>Los frijoles de la casa, cocinados lento con chorizo. La base que lo hace todo.</p>
           </div>
         </div>
         <div class="anat-item reveal d1">
-          <div class="anat-icon">🥫</div>
+          <div class="anat-icon">
+            <!-- Tarro de mayonesa -->
+            <svg viewBox="0 0 40 44" fill="none" stroke="#1A1208" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="12" y="4" width="16" height="8" rx="2.5"/>
+              <line x1="16" y1="4" x2="16" y2="12"/>
+              <line x1="20" y1="4" x2="20" y2="12"/>
+              <line x1="24" y1="4" x2="24" y2="12"/>
+              <path d="M10 12 Q8 14 8 17 L8 36 Q8 39 11 39 L29 39 Q32 39 32 36 L32 17 Q32 14 30 12 Z"/>
+              <line x1="12" y1="25" x2="28" y2="25"/>
+              <line x1="13" y1="30" x2="27" y2="30"/>
+            </svg>
+          </div>
           <div class="anat-text">
             <h3>Mayonesa de la Casa</h3>
             <p>El toque secreto. Untada con cariño en cada pieza. Así nomás.</p>
@@ -988,7 +980,7 @@
       <p class="sec-sub">Todos preparados al momento, todo bien calientito.</p>
     </div>
 
-    <h3 class="cat-title reveal">🥖 Pambazos</h3>
+    <h3 class="cat-title reveal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" style="display:inline-block;vertical-align:-5px;margin-right:8px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="4.5"/><path d="M5 11.2c1.2-.6 2.4-.6 3.6 0s2.4.6 3.6 0 2.4-.6 3.6 0 2.4.6 3.6 0"/></svg>Pambazos</h3>
 
     <div class="menu-grid">
 
@@ -996,8 +988,7 @@
       <div class="mcard reveal d1">
         <span class="mcard-badge badge-hot">⭐ Más vendido</span>
         <div class="mcard-img">
-          <!-- REEMPLAZA con: <img src="images/pambazo-tradicional.webp" alt="Pambazo Tradicional" loading="lazy"> -->
-          <div class="ph ph-food" data-label="FOTO: Pambazo Tradicional (vista superior, vapor saliendo)"></div>
+          <img src="images/pambazo-tradicional.jpg" alt="Pambazo Tradicional Pambacero" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">Tradicional Pambacero</h3>
@@ -1012,7 +1003,7 @@
       <!-- 2. Capitán -->
       <div class="mcard reveal d2">
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Pambazo Capitán con Pastor"></div>
+          <img src="images/pambazo-capitan.jpg" alt="El Capitán – Pambazo con Pastor" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">El Capitán</h3>
@@ -1027,7 +1018,7 @@
       <!-- 3. Cochinita -->
       <div class="mcard reveal d3">
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Pambazo Cochinita Pibil"></div>
+          <img src="images/pambazo-cochinita.jpg" alt="Pambazo Cochinita Pibil" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">Cochinita Pibil</h3>
@@ -1041,7 +1032,7 @@
       <!-- 4. Rumbero -->
       <div class="mcard reveal d1">
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Pambazo Rumbero con Bistec"></div>
+          <img src="images/pambazo-rumbero.jpg" alt="El Rumbero – Pambazo con Bistec" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">El Rumbero</h3>
@@ -1057,7 +1048,7 @@
       <div class="mcard reveal d2">
         <span class="mcard-badge badge-vip">👑 Premium</span>
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Pambazo De la Raza – Barbacoa de res (corte transversal)"></div>
+          <img src="images/pambazo-delaraza.jpg" alt="De la Raza – Pambazo con Barbacoa de Res" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">De la Raza</h3>
@@ -1071,7 +1062,7 @@
       <!-- 6. Media Noche Jamón -->
       <div class="mcard reveal d3">
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Media Noche Pamba – Jamón"></div>
+          <img src="images/pambazo-medianoche-jamon.jpg" alt="Media Noche – Pambazo con Jamón" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">Media Noche (Jamón)</h3>
@@ -1085,7 +1076,7 @@
       <!-- 7. Media Noche Polaca -->
       <div class="mcard reveal d1">
         <div class="mcard-img">
-          <div class="ph ph-food" data-label="FOTO: Media Noche Pamba – Carne Polaca"></div>
+          <img src="images/pambazo-medianoche-polaca.jpg" alt="Media Noche – Pambazo con Polaca" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="mcard-body">
           <h3 class="mcard-name">Media Noche (Polaca)</h3>
@@ -1101,24 +1092,39 @@
     <!-- PAMBA BOX -->
     <div class="box-section reveal">
       <div class="box-header">
-        <h2>📦 Pamba Box</h2>
+        <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" style="display:inline-block;vertical-align:-5px;margin-right:8px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>Pamba Box</h2>
         <p>El combo completo. Pambazo + agua de sabor 500ml. Ahorro con gracia.</p>
       </div>
       <div class="box-grid">
         <div class="box-card">
-          <span class="box-emoji">🥖💧</span>
+          <div class="box-emoji">
+            <!-- Pan pambazo: redondo, crema, con línea de corte -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 48" width="50" height="44"><ellipse cx="28" cy="44" rx="17" ry="4" fill="rgba(255,255,255,0.12)"/><ellipse cx="28" cy="32" rx="20" ry="8" fill="#EDD9A3"/><ellipse cx="28" cy="22" rx="20" ry="16" fill="#FFF8E8"/><ellipse cx="28" cy="18" rx="13" ry="10" fill="#F5DFA0" opacity="0.7"/><path d="M 10 30 Q 28 35 46 30" stroke="#D4B060" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="19" cy="14" rx="4.5" ry="2.8" fill="white" opacity="0.45"/></svg>
+            <!-- Vaso fresco con hielo y condensación -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 54" width="32" height="48"><path d="M 6 5 L 3 49 L 35 49 L 32 5 Z" fill="rgba(180,235,255,0.1)" stroke="rgba(200,245,255,0.5)" stroke-width="1.8" stroke-linejoin="round"/><path d="M 7.5 17 L 5 49 L 33 49 L 30.5 17 Z" fill="rgba(120,200,255,0.28)"/><rect x="11" y="19" width="9" height="9" rx="2.5" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/><rect x="20" y="23" width="7" height="7" rx="2" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><ellipse cx="2.5" cy="29" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><ellipse cx="2" cy="38" rx="1.1" ry="2" fill="rgba(180,235,255,0.55)"/><ellipse cx="35.5" cy="33" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><path d="M 8 7 L 7 21" stroke="rgba(255,255,255,0.55)" stroke-width="2.2" stroke-linecap="round"/><path d="M 6 5 L 32 5" stroke="rgba(255,255,255,0.5)" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
           <div class="box-name">Pamba Box 1</div>
           <div class="box-inc">1 Tradicional<br>+ 1 Agua de sabor 500ml</div>
           <div class="box-price"><sup>$</sup>85</div>
         </div>
         <div class="box-card">
-          <span class="box-emoji">🌮💧</span>
+          <div class="box-emoji">
+            <!-- Pan pambazo: redondo, crema, con línea de corte -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 48" width="50" height="44"><ellipse cx="28" cy="44" rx="17" ry="4" fill="rgba(255,255,255,0.12)"/><ellipse cx="28" cy="32" rx="20" ry="8" fill="#EDD9A3"/><ellipse cx="28" cy="22" rx="20" ry="16" fill="#FFF8E8"/><ellipse cx="28" cy="18" rx="13" ry="10" fill="#F5DFA0" opacity="0.7"/><path d="M 10 30 Q 28 35 46 30" stroke="#D4B060" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="19" cy="14" rx="4.5" ry="2.8" fill="white" opacity="0.45"/></svg>
+            <!-- Vaso fresco con hielo y condensación -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 54" width="32" height="48"><path d="M 6 5 L 3 49 L 35 49 L 32 5 Z" fill="rgba(180,235,255,0.1)" stroke="rgba(200,245,255,0.5)" stroke-width="1.8" stroke-linejoin="round"/><path d="M 7.5 17 L 5 49 L 33 49 L 30.5 17 Z" fill="rgba(120,200,255,0.28)"/><rect x="11" y="19" width="9" height="9" rx="2.5" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/><rect x="20" y="23" width="7" height="7" rx="2" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><ellipse cx="2.5" cy="29" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><ellipse cx="2" cy="38" rx="1.1" ry="2" fill="rgba(180,235,255,0.55)"/><ellipse cx="35.5" cy="33" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><path d="M 8 7 L 7 21" stroke="rgba(255,255,255,0.55)" stroke-width="2.2" stroke-linecap="round"/><path d="M 6 5 L 32 5" stroke="rgba(255,255,255,0.5)" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
           <div class="box-name">Pamba Box 2</div>
           <div class="box-inc">1 Especial (pastor / bistec / pibil / medianoche)<br>+ 1 Agua de sabor 500ml</div>
           <div class="box-price"><sup>$</sup>95</div>
         </div>
         <div class="box-card">
-          <span class="box-emoji">👑💧</span>
+          <div class="box-emoji">
+            <!-- Pan pambazo: redondo, crema, con línea de corte -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 48" width="50" height="44"><ellipse cx="28" cy="44" rx="17" ry="4" fill="rgba(255,255,255,0.12)"/><ellipse cx="28" cy="32" rx="20" ry="8" fill="#EDD9A3"/><ellipse cx="28" cy="22" rx="20" ry="16" fill="#FFF8E8"/><ellipse cx="28" cy="18" rx="13" ry="10" fill="#F5DFA0" opacity="0.7"/><path d="M 10 30 Q 28 35 46 30" stroke="#D4B060" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="19" cy="14" rx="4.5" ry="2.8" fill="white" opacity="0.45"/></svg>
+            <!-- Vaso fresco con hielo y condensación -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 54" width="32" height="48"><path d="M 6 5 L 3 49 L 35 49 L 32 5 Z" fill="rgba(180,235,255,0.1)" stroke="rgba(200,245,255,0.5)" stroke-width="1.8" stroke-linejoin="round"/><path d="M 7.5 17 L 5 49 L 33 49 L 30.5 17 Z" fill="rgba(120,200,255,0.28)"/><rect x="11" y="19" width="9" height="9" rx="2.5" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8"/><rect x="20" y="23" width="7" height="7" rx="2" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><ellipse cx="2.5" cy="29" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><ellipse cx="2" cy="38" rx="1.1" ry="2" fill="rgba(180,235,255,0.55)"/><ellipse cx="35.5" cy="33" rx="1.4" ry="2.5" fill="rgba(180,235,255,0.7)"/><path d="M 8 7 L 7 21" stroke="rgba(255,255,255,0.55)" stroke-width="2.2" stroke-linecap="round"/><path d="M 6 5 L 32 5" stroke="rgba(255,255,255,0.5)" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
           <div class="box-name">Pamba Box 3</div>
           <div class="box-inc">1 De la Raza (Barbacoa de res)<br>+ 1 Agua de sabor 500ml</div>
           <div class="box-price"><sup>$</sup>105</div>
@@ -1127,10 +1133,13 @@
     </div>
 
     <!-- BEBIDAS -->
-    <h3 class="cat-title reveal">🥤 Bebidas</h3>
+    <h3 class="cat-title reveal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" style="display:inline-block;vertical-align:-5px;margin-right:8px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1.2 13a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7z"/><path d="M5 7h14"/><path d="M9 4h6"/><path d="M8 12h8"/></svg>Bebidas</h3>
     <div class="drinks-wrap reveal">
       <div class="drinks-card">
-        <div class="drinks-emoji">🫙</div>
+        <div class="drinks-emoji">
+          <!-- Vaso grande 500ml con popote dorado y condensación, fondo blanco -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 76" width="62" height="74"><path d="M 10 8 L 5 70 L 59 70 L 54 8 Z" fill="rgba(200,235,255,0.3)" stroke="#70B8D8" stroke-width="2" stroke-linejoin="round"/><path d="M 11.5 26 L 8 70 L 56 70 L 52.5 26 Z" fill="rgba(200,75,95,0.14)"/><line x1="10" y1="26" x2="18" y2="26" stroke="#70B8D8" stroke-width="1.8"/><text x="20" y="30" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#70B8D8">500ml</text><rect x="14" y="33" width="14" height="14" rx="3.5" fill="rgba(150,220,250,0.45)" stroke="#80C0DC" stroke-width="1.2"/><rect x="30" y="38" width="12" height="12" rx="3" fill="rgba(150,220,250,0.35)" stroke="#80C0DC" stroke-width="1"/><rect x="47" y="4" width="5" height="42" rx="2.5" fill="#F4B942" opacity="0.85"/><ellipse cx="5" cy="40" rx="2.2" ry="3.5" fill="rgba(120,195,225,0.55)"/><ellipse cx="4.5" cy="54" rx="1.8" ry="3" fill="rgba(120,195,225,0.45)"/><ellipse cx="59" cy="46" rx="2.2" ry="3.5" fill="rgba(120,195,225,0.55)"/><path d="M 13 10 L 12 30" stroke="rgba(180,230,255,0.8)" stroke-width="3" stroke-linecap="round"/><path d="M 10 8 L 54 8" stroke="rgba(130,195,225,0.65)" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
         <div class="drinks-name">Agua de Sabor</div>
         <div class="drinks-sub">Preparada fresca, 500ml. La compañera perfecta de tu pamba.</div>
         <div class="chips">
@@ -1142,6 +1151,57 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- =========================================================
+     TESTIMONIOS
+========================================================= -->
+<section id="testimonios" style="background: var(--cream); padding: 80px 0; border-top: 1px solid rgba(229,179,50,0.1);">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+      <span class="tag">Historias reales</span>
+      <h2 class="sec-title">Lo que dice nuestra gente</h2>
+      <p class="sec-sub" style="max-width: 600px; margin: 16px auto 0;">Desde el estadio hasta El Patio. Aquí está lo que piensan de nuestros pambazos.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+
+      <div class="reveal d1" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 16px rgba(26,18,8,0.06); border-left: 4px solid var(--yellow);">
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="font-size: 20px;">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px; color: var(--gray-mid);">
+          "Los pambazos que me perseguían en el estadio ahora están en El Patio. ¡Qué sorpresa encontrarlos! Sabor igual, atención mejor."
+        </p>
+        <p style="font-weight: 600; color: var(--black); font-size: 14px;">Carlos M.</p>
+        <p style="font-size: 12px; color: var(--gray-mid);">Cliente desde 2019</p>
+      </div>
+
+      <div class="reveal d2" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 16px rgba(26,18,8,0.06); border-left: 4px solid var(--yellow);">
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="font-size: 20px;">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px; color: var(--gray-mid);">
+          "Hicimos nuestro catering con La Pamba y todos nuestros invitados preguntaron dónde conseguir pambazos. ¡Profesionales!"
+        </p>
+        <p style="font-weight: 600; color: var(--black); font-size: 14px;">Andrea & Miguel</p>
+        <p style="font-size: 12px; color: var(--gray-mid);">Boda, 2025</p>
+      </div>
+
+      <div class="reveal d3" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 16px rgba(26,18,8,0.06); border-left: 4px solid var(--yellow);">
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="font-size: 20px;">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px; color: var(--gray-mid);">
+          "El queso derretido, la salsa, todo. Es lo que falta en Veracruz. Voy cada martes desde que abrieron en El Patio."
+        </p>
+        <p style="font-weight: 600; color: var(--black); font-size: 14px;">Juan P.</p>
+        <p style="font-size: 12px; color: var(--gray-mid);">Cliente frecuente</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -1197,16 +1257,21 @@
 
       <!-- Photo grid -->
       <div class="nos-photos reveal d2">
-        <!-- REEMPLAZA con fotos reales: estadio, equipo, local -->
         <div class="nos-p1">
-          <div class="ph ph-venue" data-label="FOTO: Ambiente de estadio, gradas, venta de pambazos (2019-2022)"></div>
+          <img src="images/nosotros-1.webp" alt="La Pamba – Pambazos en producción" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
         </div>
         <div class="nos-p2">
-          <div class="ph ph-food" data-label="FOTO: Equipo La Pamba / Fundadores"></div>
+          <img src="images/nosotros-2.webp" alt="La Pamba – Preparación artesanal" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
         </div>
         <div class="nos-p3">
-          <div class="ph ph-venue" data-label="FOTO: Local en El Patio, Costa Verde (noche)"></div>
+          <img src="images/nosotros-3.webp" alt="La Pamba – Charola de pambazos" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
         </div>
+      </div>
+
+      <!-- Logos decorativos -->
+      <div style="display:flex; gap:20px; justify-content:center; margin-top:48px; align-items:center; reveal d3">
+        <img src="images/logo-pamba-final.png" alt="Logo La Pamba" style="height:100px;width:auto;">
+        <img src="images/pambita-color.png" alt="Pambita mascota" style="height:100px;width:auto;">
       </div>
 
     </div>
@@ -1241,22 +1306,25 @@
         </div>
 
         <div class="reveal d2">
-          <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20me%20interesa%20cotizar%20catering%20para%20mi%20evento%20con%20La%20Pamba%20%F0%9F%A5%96"
-             class="btn btn-wapp" target="_blank" rel="noopener">
+          <a href="#" data-msg="Hola%2C%20me%20interesa%20cotizar%20catering%20para%20mi%20evento%20con%20La%20Pamba%20%F0%9F%A5%96"
+             class="btn btn-wapp wa-link" target="_blank" rel="noopener">
             💬 Cotizar por WhatsApp
           </a>
         </div>
 
-        <!-- Event photos gallery (3 small) -->
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:32px;" class="reveal d3">
-          <div style="height:120px; border-radius:12px; overflow:hidden;">
-            <div class="ph ph-event" data-label="FOTO: Evento boda"></div>
+        <!-- Event photos gallery (4) -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:32px;" class="reveal d3">
+          <div style="height:140px; border-radius:12px; overflow:hidden;">
+            <img src="images/event-1.jpg" alt="Evento La Pamba" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <div style="height:120px; border-radius:12px; overflow:hidden;">
-            <div class="ph ph-event" data-label="FOTO: XV años"></div>
+          <div style="height:140px; border-radius:12px; overflow:hidden;">
+            <img src="images/event-2.jpeg" alt="Catering La Pamba" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <div style="height:120px; border-radius:12px; overflow:hidden;">
-            <div class="ph ph-event" data-label="FOTO: Evento corporativo"></div>
+          <div style="height:140px; border-radius:12px; overflow:hidden;">
+            <img src="images/event-3.jpeg" alt="Comiendo pambazos" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:140px; border-radius:12px; overflow:hidden;">
+            <img src="images/event-4.jpeg" alt="Evento boda catering" style="width:100%;height:100%;object-fit:cover;">
           </div>
         </div>
       </div>
@@ -1319,7 +1387,7 @@
           </div>
 
           <button type="submit" class="btn btn-yellow form-submit">
-            Enviar solicitud 🥖
+            Enviar solicitud <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 48" width="22" height="20" style="display:inline-block;vertical-align:-4px;margin-left:4px"><ellipse cx="28" cy="44" rx="17" ry="4" fill="rgba(0,0,0,0.12)"/><ellipse cx="28" cy="32" rx="20" ry="8" fill="#EDD9A3"/><ellipse cx="28" cy="22" rx="20" ry="16" fill="#FFF8E8"/><ellipse cx="28" cy="18" rx="13" ry="10" fill="#F5DFA0" opacity="0.7"/><path d="M 10 30 Q 28 35 46 30" stroke="#D4B060" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="19" cy="14" rx="4.5" ry="2.8" fill="white" opacity="0.45"/></svg>
           </button>
           <p class="form-note">También puedes escribirnos directo por WhatsApp si prefieres respuesta inmediata.</p>
         </form>
@@ -1345,23 +1413,11 @@
 
       <!-- Map -->
       <div class="map-wrap reveal">
-        <!-- GOOGLE MAPS EMBED:
-             1. Ve a Google Maps y busca "El Patio Costa Verde Veracruz" (o la dirección exacta del local).
-             2. Haz clic en "Compartir" → "Insertar mapa" y copia el código iframe.
-             3. Reemplaza el div.map-ph completo con ese iframe.
-             Ejemplo:
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
-        -->
-        <div class="map-ph">
-          <div class="map-icon">📍</div>
-          <p>
-            <strong style="color:white; display:block; margin-bottom:8px;">El Patio, Costa Verde</strong>
-            Blvd. Adolfo Ruiz Cortines<br>Costa Verde, 94294 Veracruz
-          </p>
-          <a href="https://maps.google.com/?q=Costa+Verde+Veracruz+El+Patio" target="_blank" rel="noopener">
-            Abrir en Google Maps ↗
-          </a>
-        </div>
+        <iframe
+          src="https://maps.google.com/maps?q=El+Patio+Blvd+Adolfo+Ruiz+Cortines+Costa+Verde+Boca+del+Rio+Veracruz&output=embed&z=16"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Ubicación La Pamba">
+        </iframe>
       </div>
 
       <!-- Info cards -->
@@ -1415,9 +1471,9 @@
             </div>
           </div>
           <div class="info-row">
-            <span class="info-ico">🟡</span>
+            <span class="info-ico"><img src="https://img0.didiglobal.com/static/soda_public/do1_Q5E6yjBQ1A23drt31JUf.png" alt="DiDi Food" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;"></span>
             <div class="info-txt">
-              <strong>DidiFood</strong>
+              <strong>DiDi Food</strong>
               Búscanos como "La Pamba Mx" en la app.
             </div>
           </div>
@@ -1443,22 +1499,22 @@
     </div>
     <div class="masonry reveal">
       <div class="masonry-item">
-        <div class="ph ph-food" data-label="FOTO: Pambazo tradicional en plancha, vapor y aceite (hero product shot)"></div>
+        <img src="images/pambazo-tradicional.jpg" alt="Pambazo Tradicional Pambacero en plancha" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="masonry-item">
-        <div class="ph ph-venue" data-label="FOTO: Local El Patio de noche, ambiente, gente comiendo"></div>
+        <img src="images/nosotros-2.webp" alt="Preparación artesanal de pambazos en La Pamba" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="masonry-item">
-        <div class="ph ph-food" data-label="FOTO: Corte transversal De la Raza, capas de barbacoa y queso"></div>
+        <img src="images/corte-transversal.jpeg" alt="Corte transversal de pambazo con barbacoa y queso derretido" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="masonry-item">
-        <div class="ph ph-food" data-label="FOTO: Pamba Box abierta con pambazo y agua de sabor"></div>
+        <img src="images/pambazo-delaraza.jpg" alt="De la Raza - Pambazo con barbacoa de res premium" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="masonry-item">
-        <div class="ph ph-event" data-label="FOTO: Servicio de catering en boda o evento"></div>
+        <img src="images/nosotros-1.webp" alt="Producción de pambazos para catering y eventos" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="masonry-item">
-        <div class="ph ph-food" data-label="FOTO: Queso de Oaxaca derritiéndose sobre el pambazo"></div>
+        <img src="images/queso-oaxaca-1.jpeg" alt="Queso de Oaxaca derritiéndose en pambazo fresco" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
       </div>
     </div>
   </div>
@@ -1477,34 +1533,140 @@
     </div>
 
     <div class="ped-grid">
-      <a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
-         class="ped-card wapp reveal d1" target="_blank" rel="noopener">
+      <a href="#" data-msg="Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
+         href="https://wa.me/522294612467" class="ped-card wapp reveal d1 wa-link" target="_blank" rel="noopener">
         <span class="ped-icon">
           <svg width="52" height="52" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         </span>
         <div class="ped-name">WhatsApp</div>
-        <div class="ped-desc">Escríbenos directo. Respuesta rápida, atención personalizada.</div>
+        <div class="ped-desc">Escríbenos al +52 229 461 2467. Respuesta rápida, atención personalizada.</div>
       </a>
 
       <!-- REEMPLAZA href con el deep link real de tu restaurante en Rappi -->
-      <a href="https://www.rappi.com.mx" class="ped-card rappi reveal d2" target="_blank" rel="noopener">
-        <span class="ped-icon">🛵</span>
+      <a href="https://www.rappi.com.mx/restaurantes/1930327867-la-pamba" class="ped-card rappi reveal d2" target="_blank" rel="noopener">
+        <span class="ped-icon" style="display:flex;align-items:center;justify-content:center;">
+          <img src="https://about.rappi.com/_next/image?url=%2Fimages%2Flogo.png&w=128&q=75" alt="Rappi" style="height:40px;width:auto;filter:brightness(0) invert(1);">
+        </span>
         <div class="ped-name">Rappi</div>
         <div class="ped-desc">Búscanos en la app. Pedido en minutos.</div>
       </a>
 
       <!-- REEMPLAZA href con el deep link real de tu restaurante en DidiFood -->
-      <a href="https://food.didiglobal.com/mx" class="ped-card didi reveal d3" target="_blank" rel="noopener">
-        <span class="ped-icon">🟡</span>
-        <div class="ped-name">DidiFood</div>
-        <div class="ped-desc">También en DidiFood. Rápido y fácil.</div>
+      <a href="https://web.didiglobal.com/mx/food/veracruz-ver/la-pamba/5764607636188957292/" class="ped-card didi reveal d3" target="_blank" rel="noopener">
+        <span class="ped-icon" style="display:flex;align-items:center;justify-content:center;">
+          <img src="https://img0.didiglobal.com/static/soda_public/do1_Q5E6yjBQ1A23drt31JUf.png" alt="DiDi Food" style="height:40px;width:40px;object-fit:contain;">
+        </span>
+        <div class="ped-name">DiDi Food</div>
+        <div class="ped-desc">También en DiDi Food. Rápido y fácil.</div>
       </a>
 
       <a href="https://maps.google.com/?q=Costa+Verde+Veracruz+El+Patio" class="ped-card local reveal d4" target="_blank" rel="noopener">
-        <span class="ped-icon">📍</span>
+        <span class="ped-icon" style="display:flex;align-items:center;justify-content:center;">
+          <img src="images/logo-el-patio.png" alt="El Patio" style="height:52px;width:52px;object-fit:contain;">
+        </span>
         <div class="ped-name">Ven a El Patio</div>
         <div class="ped-desc">Blvd. Adolfo Ruiz Cortines, Costa Verde. Mar–Dom 5 PM–1 AM.</div>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     PREGUNTAS FRECUENTES
+========================================================= -->
+<section id="faq" style="padding: 80px 0; background: var(--white);">
+  <div class="container" style="max-width: 700px;">
+    <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+      <span class="tag">Dudas comunes</span>
+      <h2 class="sec-title">Preguntas Frecuentes</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;" open>
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿Qué es exactamente un pambazo?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          Pan blando (estilo Orizaba), relleno de frijoles refritos con chorizo, cubierto con mayonesa especial y queso de Oaxaca derretido. Es la comida de calle más adictiva de Veracruz. Nace en las gradas del estadio.
+        </p>
+      </details>
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;">
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿Cuál es el tiempo de entrega a domicilio?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          <strong>WhatsApp:</strong> 20-30 min (tú coordinas). <strong>Rappi/DidiFood:</strong> 30-45 min según zona. Si ordenas después de las 12:30 AM, confirmamos disponibilidad. Siempre calientito.
+        </p>
+      </details>
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;">
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿Hacen combo para grupos?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          Sí. Mínimo 5 pambazos. Escríbenos por WhatsApp para combo personalizado (descuentos incluidos) o contáctanos para catering.
+        </p>
+      </details>
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;">
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿Qué métodos de pago aceptan?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          <strong>WhatsApp directo:</strong> efectivo, transferencia, Rappi Pay. <strong>Rappi/DidiFood:</strong> todas sus opciones. <strong>En local:</strong> efectivo y tarjeta.
+        </p>
+      </details>
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;">
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿Puedo reservar pambazos para eventos?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          Claro. Desde bodas hasta cumpleaños. Servicio completo con mesa de salsas, aguas de sabor y personal. Mínimo 50 pambazos. Cotiza por WhatsApp.
+        </p>
+      </details>
+
+      <details style="background: var(--cream); padding: 24px; border-radius: 12px; border: 1px solid rgba(229,179,50,0.15); cursor: pointer;">
+        <summary style="font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; user-select: none;">
+          <span>¿El local tiene lugar para comer?</span>
+          <span style="font-size: 20px; transition: transform 0.3s;">▼</span>
+        </summary>
+        <p style="margin-top: 16px; color: var(--gray-mid); line-height: 1.6;">
+          Sí, estamos en El Patio, un gastro park con varias franquicias y buena onda. Mesas, ambiente, perfecto para comer con amigos o familia.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     INSTAGRAM
+========================================================= -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); text-align: center;">
+  <div class="container">
+    <div class="reveal" style="max-width: 700px; margin: 0 auto;">
+      <h2 style="color: white; font-size: 42px; margin-bottom: 16px; font-family: var(--font-h);">Síguenos en Instagram</h2>
+      <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+        Fotos de pambazos calientitos, eventos, detrás de cámaras y lo que pasa en El Patio.
+      </p>
+      <a href="https://www.instagram.com/lapamba.mx" target="_blank" rel="noopener" class="btn" style="display: inline-block; background: white; color: #E5B332; font-weight: 700; padding: 16px 40px; border-radius: 50px; text-decoration: none; transition: all 0.3s;">
+        📸 @lapamba.mx
+      </a>
+    </div>
+
+    <!-- Instagram Embed Note -->
+    <div style="margin-top: 60px; padding: 24px; background: rgba(0,0,0,0.1); border-radius: 16px; color: white; font-size: 13px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <p style="margin: 0; opacity: 0.8;">💡 Para mostrar tu feed de Instagram automáticamente aquí, ve a <a href="https://www.elfsight.com/instagram-feed-widget/" target="_blank" style="color: white; text-decoration: underline;">elfsight.com</a> (gratis), crea un widget y envíame el código.</p>
     </div>
   </div>
 </section>
@@ -1519,27 +1681,8 @@
 
       <!-- Brand -->
       <div class="footer-brand">
-        <a href="#hero" class="logo" style="margin-bottom:14px; display:inline-flex;">
-          <svg class="logo-svg" viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="50" cy="26" rx="40" ry="7" fill="#F4B942"/>
-            <rect x="30" y="4" width="40" height="23" rx="7" fill="#F4B942"/>
-            <rect x="30" y="19" width="40" height="7" fill="#C44D34"/>
-            <circle cx="50" cy="4" r="4.5" fill="#C44D34"/>
-            <circle cx="50" cy="72" r="38" fill="#FAFAFA"/>
-            <circle cx="36" cy="62" r="10" fill="#1A1A1A"/>
-            <circle cx="33" cy="58" r="3" fill="white"/>
-            <circle cx="64" cy="62" r="10" fill="#1A1A1A"/>
-            <circle cx="61" cy="58" r="3" fill="white"/>
-            <circle cx="23" cy="74" r="7" fill="#FFBBAA" opacity="0.45"/>
-            <circle cx="77" cy="74" r="7" fill="#FFBBAA" opacity="0.45"/>
-            <path d="M 37 82 Q 50 96 63 82" stroke="#1A1A1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <path d="M 18 100 Q 50 110 82 100 Q 82 93 50 91 Q 18 93 18 100Z" fill="#C44D34"/>
-            <path d="M 56 95 L 52 115" stroke="#C44D34" stroke-width="7" fill="none" stroke-linecap="round"/>
-          </svg>
-          <div class="logo-text" style="margin-left:10px;">
-            <span class="logo-name">La Pamba</span>
-            <span class="logo-sub">Pambacería Estilo Orizaba</span>
-          </div>
+        <a href="#hero" style="display:inline-block; margin-bottom:14px;">
+          <img src="images/logo-horizontal.png" alt="La Pamba" style="height:64px;width:auto;">
         </a>
         <p>Pambazos con mucha gracia. Del estadio de béisbol a El Patio, Costa Verde, Veracruz.</p>
         <div class="foot-socials">
@@ -1548,11 +1691,11 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
           <!-- Facebook -->
-          <a href="https://www.facebook.com/LaPambaMx" class="foot-social" target="_blank" rel="noopener" aria-label="Facebook">
+          <a href="https://www.facebook.com/p/La-Pamba-Mx-61553806222858/" class="foot-social" target="_blank" rel="noopener" aria-label="Facebook">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
           <!-- WhatsApp -->
-          <a href="https://wa.me/521XXXXXXXXXX" class="foot-social" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="#" class="foot-social wa-link" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
         </div>
@@ -1586,16 +1729,16 @@
         <ul>
           <li><a href="#ubicacion">📍 El Patio, Costa Verde</a></li>
           <li><a href="#ubicacion">🕔 Mar–Dom 5 PM – 1 AM</a></li>
-          <li><a href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a href="#" class="wa-link" target="_blank" rel="noopener">💬 WhatsApp</a></li>
           <li><a href="https://www.instagram.com/lapamba.mx" target="_blank" rel="noopener">📸 @lapamba.mx</a></li>
-          <li><a href="https://www.facebook.com/LaPambaMx" target="_blank" rel="noopener">👍 La Pamba Mx</a></li>
+          <li><a href="https://www.facebook.com/p/La-Pamba-Mx-61553806222858/" target="_blank" rel="noopener">👍 La Pamba Mx</a></li>
         </ul>
       </div>
 
     </div>
 
     <div class="footer-bot">
-      <p>© 2026 La Pamba. Pambazos con mucha gracia.</p>
+      <p>© 2026 La Pamba Pambacería. Derechos reservados.</p>
       <p>Hecho con gracia en Veracruz 🫶</p>
     </div>
   </div>
@@ -1603,8 +1746,8 @@
 
 
 <!-- Mobile sticky order button -->
-<a href="https://wa.me/521XXXXXXXXXX?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
-   class="sticky-order" target="_blank" rel="noopener">
+<a href="#" data-msg="Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20hacer%20un%20pedido%20%F0%9F%A5%96"
+   class="sticky-order wa-link" target="_blank" rel="noopener">
   💬 Hacer pedido por WhatsApp
 </a>
 
@@ -1616,6 +1759,14 @@
      JAVASCRIPT
 ========================================================= -->
 <script>
+  /* --- WhatsApp links (número ensamblado en runtime, no en el HTML) --- */
+  const _waN = ['52','229','461','2467'].join('');
+  document.querySelectorAll('a.wa-link').forEach(function(el){
+    var msg = el.getAttribute('data-msg');
+    el.href = 'https://wa.me/' + _waN + (msg ? '?text=' + msg : '');
+    el.removeAttribute('data-msg');
+  });
+
   /* --- Navbar scroll effect --- */
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1689,7 +1840,7 @@
           `Hola, me interesa cotizar catering con La Pamba 🥖\n\n` +
           `Nombre: ${nombre}\nTipo de evento: ${tipo}\nFecha: ${fecha}\nCantidad estimada: ${cant} pambazos`
         );
-        window.open(`https://wa.me/521XXXXXXXXXX?text=${msg}`, '_blank');
+        window.open('https://wa.me/' + _waN + '?text=' + msg, '_blank');
         return;
       }
 
@@ -1697,6 +1848,7 @@
       e.preventDefault();
       const data   = new FormData(evForm);
       const submit = evForm.querySelector('.form-submit');
+      const originalLabel = [...submit.childNodes].map(n => n.cloneNode(true));
       submit.textContent = 'Enviando…';
       submit.disabled = true;
 
@@ -1715,7 +1867,7 @@
       } catch {
         showToast('⚠️ Error de red. Escríbenos por WhatsApp.');
       } finally {
-        submit.textContent = 'Enviar solicitud 🥖';
+        submit.replaceChildren(...originalLabel);
         submit.disabled = false;
       }
     });
